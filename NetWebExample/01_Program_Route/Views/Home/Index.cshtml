@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"]="Routing";//Sekme başlığı
+}
+@*Bu projede _Layout yok sayfa tek başına render edilir.*@
+<!DOCTYPE Html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <h1>Routing (Yönlendirme)</h1>
+    <p>Adres çubuğundaki yol,Program.cs teki rota şablonlarıla eşleştirilir ve ilgili controller/action çalışır</p>
+    <ul>
+        <li><a href="/">/</a> Home/Index(Default rota hiç bir şey yazmadık)</li>
+        <li><a href="/Home/About">/Home/About</a> Default rota ile</li>
+        <li><a href="/Hakkimizda">/Hakkimizda</a> aynı rota özel routing ile</li>
+        <li><a href="/blog/details/5">/blog/details/5</a> BlogController.Details(id:5) özel rota </li>
+        <li><a href="/blog/details/abc">/blog/details/abc</a>int kısıtına uymaz default rota yakalar ve 0 gelir id </li>
+        <li><a href="/Blog/Details/7">/Blog/Details/7</a> default rota</li>
+        <li><a href="/iletisim">/iletisim</a> ve <a href="/Contact">/Contact</a> Attribute routing</li>
+
+           
+    </ul>
+</body>
+</html>

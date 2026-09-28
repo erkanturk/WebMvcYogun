@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Ürünler";
+}
+
+<h2>@ViewBag.Baslik</h2>
+
+@foreach (var product in (List<string>)ViewData["Products"]!)
+{
+    <p>@product</p>
+}
+<a asp-action="Details" asp-controller="Home" asp-route-id="3" >3 numaralı ürün detayı</a>

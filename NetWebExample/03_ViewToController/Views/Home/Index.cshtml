@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "View => Controller";
+
+    var kisiler = new List<SelectListItem>
+    {
+        new ("Erkan","erkan"),//text kullanıcıya görünen value ise sunucuya gönderilecek değeri temsil eder.
+        new ("Furkan","furkan")
+    };
+
+}
+<h2>Formdan Controller'a veri gönderme</h2>
+@if(ViewBag.Mesaj!=null)
+{
+    <div class="alert alert-success">@ViewBag.Mesaj</div>
+}
+<h4>1) Tag Helper ile güncel önerilen yapı</h4>
+<form asp-controller="Home" asp-action="Index" method="post">
+    <input type="text" name="ad" placeholder="ad" class="form-control mb-2" />
+    <select name="kisiler" class="form-select mb-2" asp-items="kisiler"></select>
+    <label class="mb-2"><input type="checkbox" name="onay" value="true" />Onaylıyorum</label>
+    <br />
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>
+
+<h4>2) Html Helper ile (eski yol,hala çalışır)</h4>
+@using (Html.BeginForm("Index","Home",FormMethod.Post))
+{
+    @Html.TextBox("ad",null,new{@class="form-contol",placeholder="Ad"})
+    @Html.DropDownList("kisiler",kisiler,new{@class="form-select mb-2"})
+    <label class="mb-2">@Html.CheckBox("onay") Onaylıyorum</label>
+     <br />
+     <button type="submit" class="btn btn-secondary">Gönder</button>
+}
