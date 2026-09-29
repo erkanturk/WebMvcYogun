@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Taşıyıcılar";
+}
+<h1>ViewData,ViewBag,TempData</h1>
+<p>ViewBag.ad:<strong>@ViewBag.ad</strong></p>
+@foreach (var item in ViewBag.liste)
+{
+    <p>Liste elemanı: @item</p>
+}
+<p>ViewBag.sonuc:@ViewBag.sonuc</p>
+<p>@ViewData["soyad"]</p>
+<p>@TempData["cinsiyet"]</p>
+
+<a asp-action="Privacy" class="btn btn-success">Privacy</a>

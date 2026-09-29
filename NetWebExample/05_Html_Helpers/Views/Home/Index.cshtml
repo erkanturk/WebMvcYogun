@@ -1,0 +1,38 @@
+﻿@model User
+@{
+    ViewData["Title"]="Html Helpers";
+}
+<h1>Html Helper Örneği</h1>
+<p>
+    Html Helpers
+</p>
+@using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+{
+
+    <div class="mb-3">
+        @Html.LabelFor(m => m.Name)                                        @* <label for="Name">Ad</label> *@
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })     @* <input type="text" name="Name" ...> *@
+        @Html.ValidationMessageFor(m => m.Name, null, new { @class = "text-danger" })
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age, new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(m => m.Age, null, new { @class = "text-danger" })
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(m => m.Country)
+        @Html.DropDownListFor(m => m.Country, Model.CountryList, "Ülke seçin", new { @class = "form-select" })
+        @Html.ValidationMessageFor(m => m.Country, null, new { @class = "text-danger" })
+    </div>
+    <div class="mb-3">
+        @Html.RadioButtonFor(m => m.Gender, "Erkek") Erkek
+        @Html.RadioButtonFor(m => m.Gender, "Kadın") Kadın
+        @Html.ValidationMessageFor(m => m.Gender, null, new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Gönder</button>
+}
+@Html.ValidationSummary(false,"",new {@class="text-danger mt-3"})
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

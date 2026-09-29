@@ -2,4 +2,9 @@
   <Project Path="01_Program_Route/01_Program_Route.csproj" />
   <Project Path="02_ControllerToView/02_ControllerToView.csproj" />
   <Project Path="03_ViewToController/03_ViewToController.csproj" />
+  <Project Path="04_ViewData_ViewBag_TempData/04_ViewData_ViewBag_TempData.csproj" Id="ce1e2c6e-752f-4ba8-a3b7-3284886ebec6" />
+  <Project Path="05_Html_Helpers/05_Html_Helpers.csproj" Id="53f49ca6-7e65-43a3-b4d4-c529955b80eb" />
+  <Project Path="06_Custom_Helpers/06_Custom_Helpers.csproj" Id="e4384b25-1be0-46eb-b7c7-c75f639e1e41" />
+  <Project Path="07_View_Layout_PartialView/07_View_Layout_PartialView.csproj" Id="2b815a04-2514-403d-be1c-add32c80e336" />
+  <Project Path="08_Render_Section_Nested/08_Render_Section_Nested.csproj" Id="ce8bc564-faae-4776-92ca-77730b1acb89" />
 </Solution>

@@ -1,0 +1,14 @@
+﻿@using _06_Custom_Helpers.Helpers
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Özel yardımcı methodlar</h1>
+<h4>1)Static helper sınıfı (StringHelpers)</h4>
+<p>@StringHelpers.CapitalizeWords("merhaba string yardımcı methodlar")</p>
+<p>@StringHelpers.WordsLength("Erkan Türk")</p>
+<p>Controller'dan gelen:@ViewBag.Message'</p>
+
+<h4>2) IHtmlHelper extension(HtmlHelperExtension)</h4>
+<p>@Html.Etiket("Yeni")@Html.Etiket("İndirim","danger") @Html.Etiket("Stokta","success")</p>
+<h4>3) XSS Koruması</h4>
+<p>@Html.Etiket("<script>alert('x')</script>","warning")</p>
