@@ -1,0 +1,8 @@
+﻿@model HomePageViewModel 
+@{
+    ViewData["Title"]="ViewModel";
+}
+<h2>ViewModel ile birden fazla nesne</h2>
+<p>Kişi:@Model.KisiNesnesi.Ad @Model.KisiNesnesi.Soyad @Model.KisiNesnesi.Yas</p>
+<p>Adres:@Model.AdresNesnesi.AdresTanim @Model.AdresNesnesi.Sehir </p>
+<a asp-action="HomePage">Geri</a>

@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Dependency injection";
+}
+
+<h1 class="display-5 text-center mb-4">Servis yaşam süreleri (lifetime)</h1>
+<p class="text-center">Sayfayı birkaç kez yenileyin hangi değerlerin değiştiğini izleyin</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header bg-warning">Transient</div>
+            <div class="card-body">
+                <p>1.istek:<strong>@ViewBag.Transient1</strong></p>
+                <p>2.istek:<strong>@ViewBag.Transient2</strong></p>
+                <small>Her istemde yeni nesne iki değer aynı sayfada bile farklı</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header bg-warning">Scoped</div>
+            <div class="card-body">
+                <p>1.istek:<strong>@ViewBag.Scoped1</strong></p>
+                <p>2.istek:<strong>@ViewBag.Scoped2</strong></p>
+                <small>Aynı Http isteğinde aynı nesne iki değer aynı Sayfa yenilenince yeni istek gider ve değer değişir</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header bg-warning">Singleton1</div>
+            <div class="card-body">
+                <p>1.istek:<strong>@ViewBag.Singleton1</strong></p>
+                <p>2.istek:<strong>@ViewBag.Singleton2</strong></p>
+                <small>Uygulama boyunca aynı değer değişmez sayfa yenilense bile</small>
+            </div>
+        </div>
+    </div>
+</div>

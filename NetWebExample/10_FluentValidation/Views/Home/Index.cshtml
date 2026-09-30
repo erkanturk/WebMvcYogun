@@ -1,0 +1,38 @@
+﻿@model HomePageViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Fluent Validation</h1>
+    
+</div>
+
+<form asp-action="Submit" method="post" class="col-md-6 mx-auto">
+    <div class="mb-3">
+        <label asp-for="KisiNesnesi.Ad" class="form-label"></label>
+        <input asp-for="KisiNesnesi.Ad" class="form-control" />
+        <span asp-validation-for="KisiNesnesi.Ad" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="KisiNesnesi.Soyad" class="form-label"></label>
+        <input asp-for="KisiNesnesi.Soyad" class="form-control" />
+        <span asp-validation-for="KisiNesnesi.Soyad" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="KisiNesnesi.Yas" class="form-label"></label>
+        <input asp-for="KisiNesnesi.Yas" class="form-control" />
+        <span asp-validation-for="KisiNesnesi.Yas" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="AdresNesnesi.AdresTanim" class="form-label"></label>
+        <input asp-for="AdresNesnesi.AdresTanim" class="form-control" />
+        <span asp-validation-for="AdresNesnesi.AdresTanim" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="AdresNesnesi.Sehir" class="form-label"></label>
+        <input asp-for="AdresNesnesi.Sehir" class="form-control" />
+        <span asp-validation-for="AdresNesnesi.Sehir" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-danger">Gönder</button>
+</form>

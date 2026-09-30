@@ -1,0 +1,31 @@
+﻿@model Kisi 
+@{
+    ViewData["Title"]="Model Binding";
+}
+<h2>Controller View</h2>
+<p>Ad:@Model.Ad</p>
+<p>Soyad:@Model.Soyad</p>
+<p>Yaş:@Model.Yas</p>
+
+<h2>2)Form</h2>
+@if(ViewBag.Mesaj is not null)
+{
+    <div class="alert alert-info">@ViewBag.Mesaj</div>
+}
+
+<form asp-action="HomePage" method="post">
+    <div class="mb-2">
+        <label asp-for="Ad">Ad</label>
+        <input asp-for="Ad" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label asp-for="Soyad">Soyad</label>
+        <input asp-for="Soyad" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label asp-for="Yas">Yas</label>
+        <input asp-for="Yas" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>
+<p class="mt-2"><a asp-action="HomePage2">ViewModel Örneği</a></p>

@@ -7,4 +7,8 @@
   <Project Path="06_Custom_Helpers/06_Custom_Helpers.csproj" Id="e4384b25-1be0-46eb-b7c7-c75f639e1e41" />
   <Project Path="07_View_Layout_PartialView/07_View_Layout_PartialView.csproj" Id="2b815a04-2514-403d-be1c-add32c80e336" />
   <Project Path="08_Render_Section_Nested/08_Render_Section_Nested.csproj" Id="ce8bc564-faae-4776-92ca-77730b1acb89" />
+  <Project Path="09_ModelBinding/09_ModelBinding.csproj" Id="ec4ce45b-6af8-45f6-b44a-fc9c5ef329d4" />
+  <Project Path="10_FluentValidation/10_FluentValidation.csproj" Id="f57322ff-7e6c-4e27-9766-72c21b1cc8f8" />
+  <Project Path="11_AutoMapper/11_AutoMapper.csproj" Id="3b931f8e-0031-403e-8966-06dfed8df1d1" />
+  <Project Path="12_Dependency_Injection/12_Dependency_Injection.csproj" Id="aa7a56ea-efa2-43a6-be5a-1614ae3b4fc0" />
 </Solution>
