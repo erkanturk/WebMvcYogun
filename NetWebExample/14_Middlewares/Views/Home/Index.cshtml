@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Middleware</h1>
+   @if(ViewBag.MiddlewareInfo!=null)
+    {
+        <div class="alert alert-success mt-3">
+            <strong>HttpContext.Items ile gelen mesaj</strong> @ViewBag.MiddlewareInfo
+        </div>
+    }
+    <ul class="list-unstyled mt-3">
+        <li><a href="/ping" target="_blank">/ping</a>inline middleware cevaplar mvc ye gitmez</li>
+        <li>F12 network bu sayfanın cevabında <code>X-ders</code> header bulun</li>
+        <li>Konsolda dotnet run çıktısı her istek için süre ve durum kodu logu </li>
+    </ul>
+</div>

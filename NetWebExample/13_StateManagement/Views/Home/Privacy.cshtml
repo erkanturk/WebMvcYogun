@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Bu action hiçbir şey yazmaz değerler önceki isteklerden geliyorsa session/cookie çalışıyor demektir.</p>
+<table class="table w-75">
+    <tr><th>Session["UserName"]</th><td>@(ViewBag.SessionUserName?? "boş")</td></tr>
+    <tr><th>Session["Ziyaretci"]</th><td>@(ViewBag.ZiyaretSayisi?? "boş") </td></tr>
+    <tr><th>Cookie["UserName"]</th><td>@(ViewBag.CookieUserName??"boş")</td></tr>
+</table>
+<a asp-action="Index" class="btn btn-secondary">Index'e dön'</a>
